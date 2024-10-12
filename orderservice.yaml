@@ -1,0 +1,19 @@
+server:
+  port : 8091
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: "http://localhost:8070/eureka/"
+spring:
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/order_service?createDatabaseIfNotExist=true
+      username: root
+      password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
